@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <audio id="bgMusic" src="./img/Floricienta.mp3" autoplay loop preload="auto"></audio>
     <div class="night"></div>
     <div class="flowers">
       <div class="flower flower--1">
@@ -273,5 +274,17 @@
       </div>
     </div>
     <script src="main.js"></script>
-  </body>
+      <script>
+      const bgMusic = document.getElementById('bgMusic');
+      const tryPlayMusic = () => {
+        if (!bgMusic) return;
+        bgMusic.volume = 0.5;
+        bgMusic.play().catch(() => {});
+      };
+
+      document.addEventListener('DOMContentLoaded', tryPlayMusic);
+      document.addEventListener('pointerdown', tryPlayMusic, { once: true });
+      document.addEventListener('touchstart', tryPlayMusic, { once: true });
+    </script>
+</body>
 </html>
