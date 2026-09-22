@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.remove("container");
+
   const loveButton = document.getElementById("loveButton");
 
   if (!loveButton) return;

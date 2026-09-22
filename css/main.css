@@ -1344,7 +1344,5 @@ body {
     transform: scale(0);
   }
 }
-.container * {
-  -webkit-animation-play-state: paused !important;
-          animation-play-state: paused !important;
-}/*# sourceMappingURL=main.css.map */
+/* Animaciones restauradas para la flor */
+/*# sourceMappingURL=main.css.map */
